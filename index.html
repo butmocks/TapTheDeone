@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Tap The Drone — 2D obstacle game</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div class="title">
+          <span class="badge">Tap The Drone</span>
+          <span class="subtitle">Дрон ЗСУ: кликай, чтобы облетать препятствия</span>
+        </div>
+        <div class="hud" aria-live="polite">
+          <div class="hudItem">
+            <span class="hudLabel">Счёт</span>
+            <span id="score" class="hudValue">0</span>
+          </div>
+          <div class="hudItem">
+            <span class="hudLabel">Рекорд</span>
+            <span id="best" class="hudValue">0</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="stage" aria-label="Игровое поле">
+        <canvas id="game" class="gameCanvas" width="960" height="540"></canvas>
+
+        <div id="overlay" class="overlay">
+          <div class="panel">
+            <h1 id="overlayTitle" class="panelTitle">Tap The Drone</h1>
+            <p id="overlayText" class="panelText">
+              Клик/тап или <kbd>Space</kbd> — импульс вверх. Пролети через окна между
+              препятствиями.
+            </p>
+            <div class="panelActions">
+              <button id="btnStart" class="btnPrimary" type="button">Старт</button>
+              <button id="btnMute" class="btnSecondary" type="button" aria-pressed="false">
+                Звук: выкл
+              </button>
+            </div>
+            <p class="panelHint">
+              Подсказка: держи ритм. Слишком частые клики дают “пилу” и ведут в
+              препятствия.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        Управление: клик/тап, <kbd>Space</kbd>, <kbd>W</kbd>. Пауза: <kbd>P</kbd>.
+        Рестарт: <kbd>R</kbd>.
+      </footer>
+    </main>
+
+    <script src="./game.js" defer></script>
+  </body>
+</html>
