@@ -155,6 +155,34 @@ kbd {
   line-height: 1.35;
 }
 
+.panelRow {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.fieldLabel {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+}
+
+.select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  outline: none;
+}
+
+.select:focus {
+  border-color: rgba(110, 231, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(110, 231, 255, 0.16);
+}
+
 .panelActions {
   display: flex;
   flex-wrap: wrap;
@@ -208,6 +236,10 @@ button {
   }
   .hudItem {
     flex: 1;
+  }
+  .panelRow {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }
 
