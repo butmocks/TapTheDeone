@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FPV Bomber (Top-down) — Prototype</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <canvas id="game" width="1100" height="700" aria-label="Game canvas"></canvas>
+
+      <aside class="hud">
+        <section class="panel">
+          <h2>FPV Bomber</h2>
+          <div class="row"><span class="k">Счёт</span><span class="v" id="uiScore">0</span></div>
+          <div class="row"><span class="k">Боеприпасы</span><span class="v" id="uiAmmo">0/0</span></div>
+          <div class="row">
+            <span class="k">Перезарядка</span>
+            <span class="v" id="uiReload">—</span>
+          </div>
+          <div class="bar">
+            <div class="barFill" id="uiReloadBar"></div>
+          </div>
+          <p class="hint">
+            Управление: <b>WASD/Стрелки</b> — лететь, <b>Space</b> — сброс, <b>R</b> — перезарядка, <b>Tab</b> — магазин.
+          </p>
+        </section>
+
+        <section class="panel">
+          <h3>Таблица заработка</h3>
+          <ol class="scoreTable" id="uiScoreTable"></ol>
+        </section>
+
+        <section class="panel">
+          <h3>Апгрейды (за очки)</h3>
+          <div class="shopMeta" id="uiShopMeta">Нажми <b>Tab</b>, чтобы открыть</div>
+          <div class="shop" id="uiShop"></div>
+        </section>
+      </aside>
+    </div>
+
+    <script src="./src/main.js"></script>
+  </body>
+</html>
